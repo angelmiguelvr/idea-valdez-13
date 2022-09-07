@@ -1,0 +1,3 @@
+Para esta tarea gregue los siguientes cambios (aun que se ven en las banch):
+En html se agregan las meta de "keywords y descripcion" 
+En scss se agrego un @import con variables, mix y maps, tambien se uso esto para probar las operaciones
