@@ -1,3 +1,6 @@
+/*variables de hover*/
+/*variables de redes*/
+/*maps*/
 * {
   margin: 0;
   padding: 0;
@@ -191,6 +194,12 @@ h2 {
   .footer .footer__autor {
     grid-column-start: 2;
     padding: 1rem; }
+  .footer .fa-phone {
+    color: #92d18e; }
+  .footer .fa-telegram {
+    color: #207b97; }
+  .footer .fa-youtube {
+    color: #f57269; }
 
 /*aqui termina la seccion de index e inicia about*/
 .card4 {

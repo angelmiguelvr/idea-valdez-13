@@ -1,3 +1,5 @@
+@import "variables";
+
 *{
     margin: 0;
     padding: 0;
@@ -93,7 +95,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
 
-        .card1__image--foto1 , .card1__image--foto2 , .card1__image--foto3{
+        .card1__image--foto1, .card1__image--foto2, .card1__image--foto3{
             width: 20vw;
             position: relative;
             padding-top: 17%;
@@ -201,11 +203,11 @@ h1, h2{
 }
 
 h1{
-    padding-top: 15%;
+    padding-top: ($fuente+10%);
 }
 
 h2{
-    padding-top: 5%;
+    padding-top: $fuente;
     font-style: italic;
 }
 
@@ -218,11 +220,11 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     .footer__icon{
-        justify-content: center;
-        display: flex;
+        justify-content: map-get($map: $estilo, $key: justificado);
+        display: map-get($map: $estilo, $key: display);
         padding: 1rem;
         &:hover{
-            color: #19926A;
+            color: $hover;
         }
     }
     .fa-solid, .fa-brands{
@@ -232,7 +234,18 @@ h2{
         grid-column-start: 2;
         padding: 1rem;
     }
+    .fa-phone{
+        color: $green
+    }
+    .fa-telegram{
+        color: $blue
+    }
+    .fa-youtube{
+        color:$red
+    }
 }
+
+
 /*aqui termina la seccion de index e inicia about*/
 
 
