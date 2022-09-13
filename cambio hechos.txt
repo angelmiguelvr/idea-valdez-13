@@ -1,3 +1,6 @@
 Para esta tarea gregue los siguientes cambios (aun que se ven en las banch):
 En html se agregan las meta de "keywords y descripcion" 
 En scss se agrego un @import con variables, mix y maps, tambien se uso esto para probar las operaciones
+
+Se hacen las 3 secciones faltantes, se agrega un apartado especial para los colores a si como sus variables, se añaden imagenes necesarias y texto para completar todo
+Se realizan la correccion de los ultimos errores encontrados
