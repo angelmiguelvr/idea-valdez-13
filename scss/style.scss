@@ -1,4 +1,6 @@
 @import "variables";
+@import "botton";
+@import "colores";
 
 *{
     margin: 0;
@@ -11,13 +13,13 @@
 .nav{
     height: 100%;
     width: auto;
-    background: #C3D1BA;
+    background: $verdecla;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .nav__toggle{
-        color: #19926A;
+        color: $verdeosc;
         background: none;
         border: none;
         font-size: 3vw;
@@ -37,7 +39,7 @@
         .nav__item{
             text-decoration: none;
             list-style: none;
-            color: black;
+            color: $negro;
             padding: 10px;
             .nav__link{
                 font-size: 2vw;
@@ -130,7 +132,7 @@
 
 .card2{
     height: 50%;
-    background: #CECFCF;
+    background: $blanco;
     .card2__body{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -138,7 +140,7 @@
         padding-bottom: 0%;
         .card2__body--title{
             font-size: 3vw;
-            color: #788695;
+            color: $gris;
             text-shadow: #fff 0.1em 0.1em 0.2em;
             display: flex;
             justify-content: end;
@@ -154,12 +156,13 @@
             justify-content: center;
             align-self: center;
             padding-left: 0;
+            color:$white ;
         }
     }
 }
 
 .card__background--verde{
-    background: #649C8B;
+    background: $verdefon;
     width: 100vw;
     height: 60vh;
     display: grid;
@@ -191,15 +194,15 @@
 
 h3, pre{
     position: relative;
-    color: white; 
-    text-shadow: #788695 0.1em 0.1em 0.2em;
+    color: $blanco; 
+    text-shadow: $gris 0.1em 0.1em 0.2em;
     font-size: 2vw;
     font-style: italic;  
 }
 
 h1, h2{
     position: relative;
-    color: white; text-shadow: #788695 0.1em 0.1em 0.2em
+    color: white; text-shadow: $gris 0.1em 0.1em 0.2em
 }
 
 h1{
@@ -212,7 +215,7 @@ h2{
 }
 
 .footer{
-    background: #C3D1BA;
+    background: $blanco;
     width: 100%;
     height: 9vw ;
     min-height: 120px;
@@ -224,8 +227,13 @@ h2{
         display: map-get($map: $estilo, $key: display);
         padding: 1rem;
         &:hover{
-            color: $hover;
-        }
+            color: $white;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+}
     }
     .fa-solid, .fa-brands{
         font-size: 3vw;
@@ -270,7 +278,7 @@ h2{
         grid-row-start: 2;
         .about--title{
             text-shadow: none;
-            color: #19926A;
+            color: $verdeosc;
             text-align: center;
         }
         .card4__background--subtitle{
@@ -281,13 +289,13 @@ h2{
         }
         .about--title{
             text-shadow: none;
-            color: #19926A;
+            color: $verdeosc;
             text-align: center;
             padding-top: 15%;
         }
         .about--subtitle{
             text-shadow: none;
-            color: #19926A;
+            color: $verdeosc;
             text-align: justify;
             padding-top: 5%;
             font-style: italic;
@@ -297,4 +305,124 @@ h2{
         }
     }
 
+}
+
+
+
+
+/*aqui empieza la seccion de contactos*/
+
+.contenedor{
+    margin: 96px auto 40px;
+    width: 330px;
+    background-color: #19926A;
+    .contactos--titulo{
+        width: 235px;
+        margin: -14px auto 16px;
+        font-size: 1.7em;
+        line-height: 38px;
+        text-align: center;
+        bottom: 50%;
+        text-transform: uppercase;    
+    }
+    .description{
+        text-align: center;
+        margin: 0 10px 68px;
+        bottom: 50%;
+    }
+    
+}
+
+.form-container{
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 6px 0 var(--Blue-Shadow);
+}
+input{
+    width: 100%;
+    height: 55px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    border: 1px solid var(--Grayish-Blue);
+    padding-left: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+input[type="submit"]{
+    background-color: $blanco;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    border: none;
+    box-shadow: 0 3px 0 var(--Green-Shadow);
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color: $verdeosc;
+    }
+}
+
+
+
+.terminos{
+    font-size: 0.70em;
+    margin: 0 14px;
+    text-align: center;
+}
+.terminos a{
+    text-decoration: none;
+    font-weight: 1rem;
+}
+
+
+@media (min-width:1120px){
+    .contenedor{
+        display: flex;
+        width: 1114px;
+    }
+    section:nth-child(1){
+        padding-top: 200px;
+        width: 570px;
+    }
+    section:nth-child(2){
+        width: 540px;
+    }
+    .contactos--titulo{
+        margin-left: 0;
+        font-size: 3em;
+        width: 414px;
+        line-height: 55px;
+        margin-bottom: 30px;
+    }
+    .description{
+        text-align: left;
+    }
+    
+}
+
+/*aqui empieza la seccion de galeria*/
+
+main{
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+                .carousel--texto{
+                    color: $white;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+/*aqui empieza la seccion de servicios*/
+main{
+    .conteiner-fluid{
+            .compromiso{
+                background: $verdefon;
+                text-align: center;
+            }
+    }
 }
